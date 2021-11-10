@@ -24,9 +24,9 @@ const Span = styled.span`
   color: white;
   padding: 0 20px 0 0;
 `
-const Title = "BẢN ĐỒ VIỆT NAM";
+const Title = "Bản đồ thông tin các tỉnh thành Việt Nam";
 const NumberLabel = "Đường dây nóng:";
-const NumberPhone = "123456789 - 987654321";
+const NumberPhone = "123.456789 - 987.654321";
 
 function Header() {
   return (
