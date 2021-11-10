@@ -23,6 +23,7 @@ const Span = styled.span`
   font-size: 25px;
   color: white;
   padding: 0 20px 0 0;
+  font-family: serif;
 `
 const Title = "Bản đồ thông tin các tỉnh thành Việt Nam";
 const NumberLabel = "Đường dây nóng:";
