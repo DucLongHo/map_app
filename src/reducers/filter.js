@@ -10,4 +10,4 @@ const filter = (state = initialState, action) => {
     }
   };
   
-export default filter
+export default filter   

@@ -109,6 +109,9 @@ function SideBar({selectVillageHandle, onclickFilterHandle}) {
     const onChangeSelect = useCallback((e) => {
         selectVillageHandle(e.value);
     })
+    const onClickVillageIcon = useCallback(() => {
+        setShowSideBar(!showSideBar);
+    })
   return (
     <Container className={showSideBar? "": "_container-sidebar"}>
         <Select 
@@ -122,7 +125,7 @@ function SideBar({selectVillageHandle, onclickFilterHandle}) {
             {!showSideBar &&
             <li className="" id="0" onClick={onCLickHandle}>
                 <a href="#" id="0">
-                    <GiVillage style={styleIcon} id="0"/>
+                    <GiVillage style={styleIcon} id="0" onClick={onClickVillageIcon}/>
                 </a>
             </li>
             }
