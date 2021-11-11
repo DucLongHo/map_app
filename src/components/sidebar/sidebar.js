@@ -14,7 +14,7 @@ import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from 'react-icons/md';
 import {GiVillage} from 'react-icons/gi';
 
 const options = [
-    { value: 'haiduong', label: 'Hải Dương' },
+    // { value: 'haiduong', label: 'Hải Dương' },
     { value: 'hungyen', label: 'Hưng Yên' },
   ]
 
@@ -162,13 +162,11 @@ function SideBar({selectVillageHandle, onclickFilterHandle}) {
 }
 
 SideBar.propTypes = {
-    village: PropTypes.string,
     selectVillage: PropTypes.func,
     onclickFilter: PropTypes.func,
 };
 
 const mapStateToProps = (state) => ({
-    village: state.village,
 });
   
 const mapDispatchToProps = {
