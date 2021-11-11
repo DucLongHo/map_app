@@ -11,7 +11,7 @@ import {GiVillage} from 'react-icons/gi';
 
 const options = [
     { value: 'haiduong', label: 'Hải Dương' },
-    { value: 'haiduong', label: 'Hải Dương' },
+    { value: 'hungyen', label: 'Hưng Yên' },
     { value: 'haiduong', label: 'Hải Dương' },
   ]
 
@@ -74,17 +74,14 @@ const styleArrowRight = {
     ...styleArrowLeft,
     left: "60%",
 }
-const styleIconVillage = {
-    ...styleIcon,
-    marginBottom: "3px"
-}
+
 const customStyles = {
     control: (provided,state) => ({
         ...provided,
         width: 218,
-        marginTop: 10,
+        margin: "10px 0 17px 0",
         display: state.selectProps.display,
-        transition: "0.5s",
+        transition: "1s",
     }),
   }
   
@@ -116,7 +113,7 @@ function SideBar() {
             {!showSideBar &&
             <li className="" id="0" onClick={onCLickHandle}>
                 <a href="#" id="0">
-                    <GiVillage style={styleIconVillage} id="0"/>
+                    <GiVillage style={styleIcon} id="0"/>
                 </a>
             </li>
             }
