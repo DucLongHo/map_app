@@ -1,11 +1,21 @@
 import React, {useCallback, useState} from 'react'
 import styled from 'styled-components';
+import Select from 'react-select'
+
 import {ImLocation} from 'react-icons/im';
 import {BiArea} from 'react-icons/bi';
 import {TiWeatherPartlySunny} from 'react-icons/ti';
 import {RiMoneyDollarCircleLine} from 'react-icons/ri';
 import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from 'react-icons/md';
-const Container = styled.div`
+import {GiVillage} from 'react-icons/gi';
+
+const options = [
+    { value: 'haiduong', label: 'Hải Dương' },
+    { value: 'haiduong', label: 'Hải Dương' },
+    { value: 'haiduong', label: 'Hải Dương' },
+  ]
+
+const Container = styled.div`   
     padding: 10px 0 10px 10px;
     box-sizing: border-box;
     margin: 10px 0 0 0;
@@ -64,6 +74,17 @@ const styleArrowRight = {
     ...styleArrowLeft,
     left: "60%",
 }
+
+const customStyles = {
+    control: (provided,state) => ({
+        ...provided,
+        width: 218,
+        marginTop: 10,
+        display: state.selectProps.display,
+        transition: "0.5s",
+    }),
+  }
+  
 function SideBar() {
     const [showSideBar, setShowSideBar] = useState(true);
     
@@ -82,7 +103,20 @@ function SideBar() {
     })
   return (
     <Container className={showSideBar? "": "_container-sidebar"}>
+        <Select 
+            options={options} 
+            placeholder="Province"
+            styles={customStyles}
+            display={showSideBar ? "flex" : "none"}
+        /> 
         <Nav>
+            {!showSideBar &&
+            <li className="" id="0" onClick={onCLickHandle}>
+                <a href="#" id="0">
+                    <GiVillage style={styleIcon} id="0"/>
+                </a>
+            </li>
+            }
             <li className="" id="1" onClick={onCLickHandle}>
                 <a href="#" id="1">
                     <ImLocation style={styleIcon} id="1"/>
