@@ -74,7 +74,10 @@ const styleArrowRight = {
     ...styleArrowLeft,
     left: "60%",
 }
-
+const styleIconVillage = {
+    ...styleIcon,
+    marginBottom: "3px"
+}
 const customStyles = {
     control: (provided,state) => ({
         ...provided,
@@ -113,7 +116,7 @@ function SideBar() {
             {!showSideBar &&
             <li className="" id="0" onClick={onCLickHandle}>
                 <a href="#" id="0">
-                    <GiVillage style={styleIcon} id="0"/>
+                    <GiVillage style={styleIconVillage} id="0"/>
                 </a>
             </li>
             }
