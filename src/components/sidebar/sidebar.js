@@ -1,6 +1,10 @@
 import React, {useCallback, useState} from 'react'
 import styled from 'styled-components';
 import Select from 'react-select'
+import { connect } from "react-redux";
+import PropTypes from 'prop-types';
+
+import { selectVillage, onclickFilter } from '../../actions';
 
 import {ImLocation} from 'react-icons/im';
 import {BiArea} from 'react-icons/bi';
@@ -85,7 +89,7 @@ const customStyles = {
     }),
   }
   
-function SideBar() {
+function SideBar({selectVillageHandle, onclickFilterHandle}) {
     const [showSideBar, setShowSideBar] = useState(true);
     
     const onCLickHandle = useCallback((e) => {        
@@ -97,9 +101,13 @@ function SideBar() {
                 element.className = "";
             };
         });
+        onclickFilterHandle(e.target.id);
     });
     const onClickHandleShowSideBar = useCallback(() => {
         setShowSideBar(!showSideBar);
+    })
+    const onChangeSelect = useCallback((e) => {
+        selectVillageHandle(e.value);
     })
   return (
     <Container className={showSideBar? "": "_container-sidebar"}>
@@ -108,6 +116,7 @@ function SideBar() {
             placeholder="Province"
             styles={customStyles}
             display={showSideBar ? "flex" : "none"}
+            onChange={onChangeSelect}
         /> 
         <Nav>
             {!showSideBar &&
@@ -117,28 +126,28 @@ function SideBar() {
                 </a>
             </li>
             }
-            <li className="" id="1" onClick={onCLickHandle}>
-                <a href="#" id="1">
-                    <ImLocation style={styleIcon} id="1"/>
-                    <Title className="title" id="1">Location</Title>
+            <li className="" id="location" onClick={onCLickHandle}>
+                <a href="#" id="location">
+                    <ImLocation style={styleIcon} id="location"/>
+                    <Title className="title" id="location">Location</Title>
                 </a>
             </li>
-            <li className="" id="2" onClick={onCLickHandle}>
-                <a href="#" id="2">
-                    <BiArea style={styleIcon} id="2"/>
-                    <Title className="title" id="2" >Area</Title>
+            <li className="" id="area" onClick={onCLickHandle}>
+                <a href="#" id="area">
+                    <BiArea style={styleIcon} id="area"/>
+                    <Title className="title" id="area" >Area</Title>
                 </a>
             </li>
-            <li className="" id="3" onClick={onCLickHandle}>
-                <a href="#" id="3">
-                    <TiWeatherPartlySunny style={styleIcon} id="3"/>
-                    <Title className="title" id="3">Climate</Title>
+            <li className="" id="climate" onClick={onCLickHandle}>
+                <a href="#" id="climate">
+                    <TiWeatherPartlySunny style={styleIcon} id="climate"/>
+                    <Title className="title" id="climate">Climate</Title>
                 </a>
             </li>
-            <li className="" id="4" onClick={onCLickHandle}>
-                <a href="#" id="4">
-                    <RiMoneyDollarCircleLine style={styleIcon}id="4" />
-                    <Title className="title" id="4">Economic</Title>
+            <li className="" id="economic" onClick={onCLickHandle}>
+                <a href="#" id="economic">
+                    <RiMoneyDollarCircleLine style={styleIcon}id="economic" />
+                    <Title className="title" id="economic">Economic</Title>
                 </a>
             </li>
         </Nav>
@@ -151,4 +160,19 @@ function SideBar() {
   )
 }
 
-export default SideBar
+SideBar.propTypes = {
+    village: PropTypes.string,
+    selectVillage: PropTypes.func,
+    onclickFilter: PropTypes.func,
+};
+
+const mapStateToProps = (state) => ({
+    village: state.village,
+});
+  
+const mapDispatchToProps = {
+    selectVillageHandle: selectVillage,
+    onclickFilterHandle: onclickFilter,
+};
+  
+export default connect(mapStateToProps, mapDispatchToProps)(SideBar);
