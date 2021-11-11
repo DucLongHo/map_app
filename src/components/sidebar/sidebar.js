@@ -16,14 +16,12 @@ import {GiVillage} from 'react-icons/gi';
 const options = [
     { value: 'haiduong', label: 'Hải Dương' },
     { value: 'hungyen', label: 'Hưng Yên' },
-    { value: 'haiduong', label: 'Hải Dương' },
   ]
 
 const Container = styled.div`   
     padding: 10px 0 10px 10px;
     box-sizing: border-box;
-    margin: 10px 0 0 0;
-    height: calc(100% - 90px);
+    height: calc(100% - 60px);
     width: 250px;
     background: #4d5bf9;
     transition: 0.5s;
@@ -106,7 +104,7 @@ function SideBar({selectVillageHandle, onclickFilterHandle}) {
     const onClickHandleShowSideBar = useCallback(() => {
         setShowSideBar(!showSideBar);
     })
-    const onChangeSelect = useCallback((e) => {
+    const onChangeSelectHandle = useCallback((e) => {
         selectVillageHandle(e.value);
     })
     const onClickVillageIcon = useCallback(() => {
@@ -119,7 +117,7 @@ function SideBar({selectVillageHandle, onclickFilterHandle}) {
             placeholder="Province"
             styles={customStyles}
             display={showSideBar ? "flex" : "none"}
-            onChange={onChangeSelect}
+            onChange={onChangeSelectHandle}
         /> 
         <Nav>
             {!showSideBar &&

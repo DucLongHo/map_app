@@ -4,8 +4,6 @@ import { connect } from "react-redux";
 import Header from '../src/components/header';
 import SideBar from './components/sidebar/sidebar';
 
-import { selectVillage } from './actions';
-
 function App({village, filter}) {
   return (
     <div>
@@ -18,7 +16,6 @@ function App({village, filter}) {
 App.propTypes = {
   village: PropTypes.string,
   filter: PropTypes.string,
-  selectVillage: PropTypes.func,
 };
 
 
@@ -28,7 +25,6 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-  selectVillage: selectVillage,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
