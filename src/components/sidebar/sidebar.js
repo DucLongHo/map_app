@@ -82,7 +82,7 @@ const styleArrowRight = {
 const customStyles = {
     control: (provided,state) => ({
         ...provided,
-        width: 218,
+        width: 230,
         margin: "10px 0 17px 0",
         display: state.selectProps.display,
         transition: "1s",
