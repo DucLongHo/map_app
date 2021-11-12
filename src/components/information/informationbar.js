@@ -37,7 +37,8 @@ const Property = styled.div`
 const Content = styled.p`
 	line-height: normal;
 	margin-bottom: 10px;
-	font-size: 20px;
+	font-size: 15px;
+	padding-left: 10px;
 `
 function InformationBar({village, filter}) {
 	const [showInfor, setShowInfor] = useState(false)
@@ -47,7 +48,7 @@ function InformationBar({village, filter}) {
 	},[village,filter]);
 
   return (
-    <Container>
+    <Container style={{display:filter ? "" : "none" }}>
 			{showInfor &&
 				<ul>
 					{ filter === "location" && 
@@ -72,7 +73,7 @@ function InformationBar({village, filter}) {
 					}
 					{ filter === "area" && 
 						<li>
-							<Title> Diện tích</Title>
+							<Title> Diện tích </Title>
 							<Property>
 								Diện tích toàn tỉnh/thành phố:
 							</Property>
@@ -90,6 +91,46 @@ function InformationBar({village, filter}) {
 							</Property>
 							<Content>
 								{data[village][filter].culture}
+							</Content>
+						</li>
+					}
+					{ filter === "climate" && 
+						<li>
+							<Title> Khí hậu </Title>
+							<Property>
+								Đặc điểm chung:
+							</Property>
+							<Content>
+								{data[village][filter].general}
+							</Content>
+							<Property>
+								Nhiệt độ trung bình năm:
+							</Property>
+							<Content>
+								{data[village][filter].temperature}
+							</Content>
+							<Property>
+								Độ ẩm trung bình năm:
+							</Property>
+							<Content>
+								{data[village][filter].humidity}
+							</Content>
+							<Property>
+								Lượng mưa trung bình năm:
+							</Property>
+							<Content>
+								{data[village][filter].rainfall}
+							</Content>
+						</li>
+					}
+					{ filter === "economic" && 
+						<li>
+							<Title> Tình hình kinh tế </Title>
+							<Property>
+								GDP:
+							</Property>
+							<Content>
+								{data[village][filter].GDP.cultivation}
 							</Content>
 						</li>
 					}

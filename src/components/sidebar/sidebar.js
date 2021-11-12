@@ -89,9 +89,9 @@ const customStyles = {
     }),
   }
   
-function SideBar({selectVillageHandle, onclickFilterHandle}) {
+function SideBar({selectVillageHandle, onclickFilterHandle, village}) {
     const [showSideBar, setShowSideBar] = useState(true);
-    
+    const [showFilter, setShowFilter] = useState(false);
     const onCLickHandle = useCallback((e) => {        
         const list = document.querySelectorAll('li');
         list.forEach((element) => {
@@ -108,6 +108,7 @@ function SideBar({selectVillageHandle, onclickFilterHandle}) {
     })
     const onChangeSelectHandle = useCallback((e) => {
         selectVillageHandle(e.value);
+        setShowFilter(true);
     })
     const onClickVillageIcon = useCallback(() => {
         setShowSideBar(!showSideBar);
@@ -121,7 +122,7 @@ function SideBar({selectVillageHandle, onclickFilterHandle}) {
             display={showSideBar ? "flex" : "none"}
             onChange={onChangeSelectHandle}
         /> 
-        <Nav>
+        <Nav style={{display: showFilter ? "" : "none"}}>
             {!showSideBar &&
             <li className="" id="0" onClick={onCLickHandle}>
                 <a href="#" id="0">
@@ -166,6 +167,7 @@ function SideBar({selectVillageHandle, onclickFilterHandle}) {
 SideBar.propTypes = {
     selectVillage: PropTypes.func,
     onclickFilter: PropTypes.func,
+    village: PropTypes.string
 };
 
 const mapStateToProps = (state) => ({
