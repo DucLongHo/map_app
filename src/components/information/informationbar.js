@@ -12,9 +12,9 @@ const Container = styled.div`
 	box-sizing: border-box;
 	height: calc(100% - 60px);
 	width: 300px;
-	background: #4d5bf9;
+	background: #2176be;
 	transition: 0.5s;
-	border-left: 5px solid #4d5bf9;
+	border-left: 5px solid #2176be;
 	position: absolute;
 	right: 0;
 	font-family: initial;
@@ -36,6 +36,8 @@ const Property = styled.div`
 `
 const Content = styled.p`
 	line-height: normal;
+	margin-bottom: 10px;
+	font-size: 20px;
 `
 function InformationBar({village, filter}) {
 	const [showInfor, setShowInfor] = useState(false)
@@ -48,24 +50,49 @@ function InformationBar({village, filter}) {
     <Container>
 			{showInfor &&
 				<ul>
-					<li style={{display: filter === "location" ? "block" : "none"}}>
-						<Title> Vị trí địa lý</Title>
-						<Property>
-							Vị trí chiến lược:
-						</Property>
-						<Content>
-							{data[village][filter].criticalPosition}
-						</Content>
-					</li>
-					<li style={{display: filter === "area" ? "block" : "none"}}>
-						<Title> Diện tích</Title>
-						<Property>
-							Vị trí chiến lược:
-						</Property>
-						<Content>
-							{data[village][filter].criticalPosition}
-						</Content>
-					</li>
+					{ filter === "location" && 
+						<li>
+							<Title> Vị trí địa lý</Title>
+							<Property>
+								Vị trí chiến lược:
+							</Property>
+							<Content>
+								{data[village][filter].criticalPosition}
+							</Content>
+							<Property>
+								Địa hình địa chất:
+							</Property>
+							<Content>
+								{data[village][filter].geologicalTopography.topographic}
+							</Content>
+							<Content>
+								{data[village][filter].geologicalTopography.geological}
+							</Content>
+						</li>
+					}
+					{ filter === "area" && 
+						<li>
+							<Title> Diện tích</Title>
+							<Property>
+								Diện tích toàn tỉnh/thành phố:
+							</Property>
+							<Content>
+								{data[village][filter].areaProvince}
+							</Content>
+							<Property>
+								Diện tích đất nông nghiệp, thương mại, dịch vụ:
+							</Property>
+							<Content>
+								{data[village][filter].economy}
+							</Content>
+							<Property>
+								Diện tích nông lâm ngư nghiệp:
+							</Property>
+							<Content>
+								{data[village][filter].culture}
+							</Content>
+						</li>
+					}
 				</ul>				
 			}
     </Container>

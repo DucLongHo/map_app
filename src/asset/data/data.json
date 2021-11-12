@@ -10,6 +10,100 @@
         },
         "area": {
             "areaProvince": "930,2 km2, chiếm 6,2% diện tích ĐBBB",
+            "economy": "13 KCN tập trung với quy mô 3.048 ha </br> 1.779 ha đã được đầu tư xây dựng hạ tầng; gần 70% đất KCN đã được cho thuê. Đặc biệt, KCN, đô thị, dịch vụ Lý Thường Kiệt rộng 3000 ha đã được hình thành.",
+            "culture": "2016 - 2020: chuyển đổi 9.700 ha đất trồng lúa kém hiệu quả sang trồng cây hàng năm, kết hợp chăn nuôi và nuôi trồng thủy sản."
+        },
+        "climate": {
+            "general": "Mang đặc điểm chung của vùng ĐBSH: khí hậu nhiệt đới gió mùa, nóng ẩm, nhiều nắng, mùa đông lạnh và có 4 mùa rõ rệt (xuân, hạ, thu, đông).",
+            "temperature": "Nhiệt độ trung bình hàng năm: 23,2 oC.",
+            "humidity": "Độ ẩm không khí trung bình năm là 86%, tháng cao nhất là 92%, thấp nhất là 79%.",
+            "rainfall": "Lượng mưa trung bình dao động trong khoảng 1500-1600mm. Lượng mưa phân bố không đều trong năm, tập trung 80 - 85% vào mùa mưa (tháng 5 - 10)"
+        },
+        "economic": {
+            "GDP": {
+                "cultivation": "Năng suất các loại cây trồng đều tăng 0,38% (lúa), 0,45% (ngô), 0,45% (lạc), 0,83% (rau) dù cho tình hình covid vẫn còn đang phức tạp.",
+                "breeding": "Giá thức ăn tăng cao, giá thịt lợn hơi bình quân giảm, giữ ở mức 58 - 62 nghìn đồng/kg.",
+                "industrial": "Giá trị sản xuất công nghiệp và xây dựng 9 tháng đầu năm đạt 174.693 tỷ đồng, tăng 7,74% so với năm 2020.",
+                "tradeService": "Giá trị ước đạt 18.215 tỷ đồng, tăng 1,93% so với cùng kỳ năm 2020; tổng mức bán lẻ và doanh thu đạt 32.627 tỷ đồng, tăng 4,85% so với cùng kỳ."
+            },
+            "structure": {
+                "growthRate": "8,38%",
+                "stateBudgetRevenue": "14.865 tỷ đồng",
+                "GRDP": "79,57 triệu đồng",
+                "poorHouseholds": " < 1,8%",
+                "industryConstruction": "Chiếm 61,5%",
+                "service": "Chiếm 28,85%",
+                "agriculture": "Chiếm 9,65%"
+            },
+            "foreignTrade": {
+                "export": "Giá trị xuất khẩu đạt 5,3 tỷ USD.",
+                "import": null
+            },
+            "abroad": {
+                "businessesAndProjects": "18 quốc gia, vùng lãnh thổ đăng ký đầu tư trên địa bàn tỉnh. Có thêm 15 dự án nước ngoài (tổng dự án nước ngoài: 496); vốn đầu tư trực tiếp nước ngoài là 8.971 tỷ đồng, tăng 1,92%.",
+                "totalInvestment": "Tổng vốn đăng ký đạt 148,7 triệu USD (tăng 94,4 triệu USD so với cùng kỳ năm 2020)",
+                "fields": "Chủ yếu là đầu tư vào các KCN: Sản xuất sản phẩm điện tử, máy vi tính và sản phẩm quang học; Sản xuất sản phẩm từ cao su và plastic; Sản xuất sản phẩm từ khoáng và phi kim loại khác; Sản xuất ô tô và xe có động cơ khác..."
+            }
+        }
+    },
+    "haiduong":
+    {
+        "location": {
+            "criticalPosition": "Ở trung tâm đồng bằng Bắc Bộ. Giáp 5 tỉnh: Bắc Ninh, Hải Dương, Thái Bình, Hà Nam, thành phố Hà Nội.",
+            "geologicalTopography": {
+                "topographic": "Tương đối bằng phẳng, không có đồi, núi, rừng, biển. Được chia thành 5 tiểu vùng dựa trên độ cao của từng tiểu vùng.",
+                "geological": "Nằm gọn trong ô trũng thuộc ĐBSH, cấu tạo từ các trầm tích dày 150 - 160m. Thứ tự địa tầng lần lượt là: Trầm tích Phistoxen, Trầm tích Holoxen."
+            }
+        },
+        "area": {
+            "areaProvince": "930,2 km2, chiếm 6,2% diện tích ĐBBB",
+            "economy": "13 KCN tập trung với quy mô 3.048 ha; 1.779 ha đã được đầu tư xây dựng hạ tầng; gần 70% đất KCN đã được cho thuê. Đặc biệt, KCN, đô thị, dịch vụ Lý Thường Kiệt rộng 3000 ha đã được hình thành.",
+            "culture": "2016 - 2020: chuyển đổi 9.700 ha đất trồng lúa kém hiệu quả sang trồng cây hàng năm, kết hợp chăn nuôi và nuôi trồng thủy sản."
+        },
+        "climate": {
+            "general": "Mang đặc điểm chung của vùng ĐBSH: khí hậu nhiệt đới gió mùa, nóng ẩm, nhiều nắng, mùa đông lạnh và có 4 mùa rõ rệt (xuân, hạ, thu, đông).",
+            "temperature": "Nhiệt độ trung bình hàng năm: 23,2 oC.",
+            "humidity": "Độ ẩm không khí trung bình năm là 86%, tháng cao nhất là 92%, thấp nhất là 79%.",
+            "rainfall": "Lượng mưa trung bình dao động trong khoảng 1500-1600mm. Lượng mưa phân bố không đều trong năm, tập trung 80 - 85% vào mùa mưa (tháng 5 - 10)"
+        },
+        "economic": {
+            "GDP": {
+                "cultivation": "Năng suất các loại cây trồng đều tăng 0,38% (lúa), 0,45% (ngô), 0,45% (lạc), 0,83% (rau) dù cho tình hình covid vẫn còn đang phức tạp.",
+                "breeding": "Giá thức ăn tăng cao, giá thịt lợn hơi bình quân giảm, giữ ở mức 58 - 62 nghìn đồng/kg.",
+                "industrial": "Giá trị sản xuất công nghiệp và xây dựng 9 tháng đầu năm đạt 174.693 tỷ đồng, tăng 7,74% so với năm 2020.",
+                "tradeService": "Giá trị ước đạt 18.215 tỷ đồng, tăng 1,93% so với cùng kỳ năm 2020; tổng mức bán lẻ và doanh thu đạt 32.627 tỷ đồng, tăng 4,85% so với cùng kỳ."
+            },
+            "structure": {
+                "growthRate": "8,38%",
+                "stateBudgetRevenue": "14.865 tỷ đồng",
+                "GRDP": "79,57 triệu đồng",
+                "poorHouseholds": " < 1,8%",
+                "industryConstruction": "Chiếm 61,5%",
+                "service": "Chiếm 28,85%",
+                "agriculture": "Chiếm 9,65%"
+            },
+            "foreignTrade": {
+                "export": "Giá trị xuất khẩu đạt 5,3 tỷ USD.",
+                "import": null
+            },
+            "abroad": {
+                "businessesAndProjects": "18 quốc gia, vùng lãnh thổ đăng ký đầu tư trên địa bàn tỉnh. Có thêm 15 dự án nước ngoài (tổng dự án nước ngoài: 496); vốn đầu tư trực tiếp nước ngoài là 8.971 tỷ đồng, tăng 1,92%.",
+                "totalInvestment": "Tổng vốn đăng ký đạt 148,7 triệu USD (tăng 94,4 triệu USD so với cùng kỳ năm 2020)",
+                "fields": "Chủ yếu là đầu tư vào các KCN: Sản xuất sản phẩm điện tử, máy vi tính và sản phẩm quang học; Sản xuất sản phẩm từ cao su và plastic; Sản xuất sản phẩm từ khoáng và phi kim loại khác; Sản xuất ô tô và xe có động cơ khác..."
+            }
+        }
+    },
+    "bacgiang":
+    {
+        "location": {
+            "criticalPosition": "Ở trung tâm đồng bằng Bắc Bộ. Giáp 5 tỉnh: Bắc Ninh, Hải Dương, Thái Bình, Hà Nam, thành phố Hà Nội.",
+            "geologicalTopography": {
+                "topographic": "Tương đối bằng phẳng, không có đồi, núi, rừng, biển. Được chia thành 5 tiểu vùng dựa trên độ cao của từng tiểu vùng.",
+                "geological": "Nằm gọn trong ô trũng thuộc ĐBSH, cấu tạo từ các trầm tích dày 150 - 160m. Thứ tự địa tầng lần lượt là: Trầm tích Phistoxen, Trầm tích Holoxen."
+            }
+        },
+        "area": {
+            "areaProvince": "930,2 km2, chiếm 6,2% diện tích ĐBBB",
             "economy": "13 KCN tập trung với quy mô 3.048 ha; 1.779 ha đã được đầu tư xây dựng hạ tầng; gần 70% đất KCN đã được cho thuê. Đặc biệt, KCN, đô thị, dịch vụ Lý Thường Kiệt rộng 3000 ha đã được hình thành.",
             "culture": "2016 - 2020: chuyển đổi 9.700 ha đất trồng lúa kém hiệu quả sang trồng cây hàng năm, kết hợp chăn nuôi và nuôi trồng thủy sản."
         },

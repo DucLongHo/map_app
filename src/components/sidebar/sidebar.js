@@ -14,18 +14,19 @@ import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from 'react-icons/md';
 import {GiVillage} from 'react-icons/gi';
 
 const options = [
-    // { value: 'haiduong', label: 'Hải Dương' },
+    { value: 'haiduong', label: 'Hải Dương' },
     { value: 'hungyen', label: 'Hưng Yên' },
+    { value: 'bacgiang', label: 'Bắc Giang' },
   ]
 
 const Container = styled.div`   
     padding: 10px 0 10px 10px;
     box-sizing: border-box;
     height: calc(100% - 60px);
-    width: 250px;
-    background: #4d5bf9;
+    width: 260px;
+    background: #2176bd;
     transition: 0.5s;
-    border-left: 5px solid #4d5bf9;
+    border-left: 5px solid #2176bd;
     position: absolute;
 `;
 const Nav = styled.ul`
@@ -34,7 +35,7 @@ const Nav = styled.ul`
     margin: 0 0 300px 0;
     li {
         list-style: none;
-        width: 215px;
+        width: 230px;
         border-radius: 5px;
         margin-top: 10px;
         a {
@@ -67,10 +68,11 @@ const styleIcon = {
 const styleArrowLeft = {
     position: "absolute",
     top: "50%",
-    left: "90%",
+    left: "80%",
     width: "35px",
     height: "35px",
     color: "white",
+    padding: "10px"
 }
 const styleArrowRight = {
     ...styleArrowLeft,
@@ -130,25 +132,25 @@ function SideBar({selectVillageHandle, onclickFilterHandle}) {
             <li className="" id="location" onClick={onCLickHandle}>
                 <a href="#" id="location">
                     <ImLocation style={styleIcon} id="location"/>
-                    <Title className="title" id="location">Location</Title>
+                    <Title className="title" id="location">Vị Trí Địa Lý</Title>
                 </a>
             </li>
             <li className="" id="area" onClick={onCLickHandle}>
                 <a href="#" id="area">
                     <BiArea style={styleIcon} id="area"/>
-                    <Title className="title" id="area" >Area</Title>
+                    <Title className="title" id="area" >Diện Tích</Title>
                 </a>
             </li>
             <li className="" id="climate" onClick={onCLickHandle}>
                 <a href="#" id="climate">
                     <TiWeatherPartlySunny style={styleIcon} id="climate"/>
-                    <Title className="title" id="climate">Climate</Title>
+                    <Title className="title" id="climate">Khí Hậu</Title>
                 </a>
             </li>
             <li className="" id="economic" onClick={onCLickHandle}>
                 <a href="#" id="economic">
                     <RiMoneyDollarCircleLine style={styleIcon}id="economic" />
-                    <Title className="title" id="economic">Economic</Title>
+                    <Title className="title" id="economic">Tình Hình Kinh Tế</Title>
                 </a>
             </li>
         </Nav>
